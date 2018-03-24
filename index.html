@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ysSlider.js -  Simple Slider</title>
+  <script src="js/ysSlider.js"></script>
+  <link rel="stylesheet" href="css/ysSlider.css" />
+</head>
+
+<body>
+  <div id="ysSlider">
+    <div class="item"><img src="https://unsplash.it/600/300?image=0" alt="First image" /></div>
+    <div class="item"><img src="https://unsplash.it/600/300?image=1" alt="Second image" /></div>
+    <div class="item"><img src="https://unsplash.it/600/300?image=2" alt="Third image" /></div>
+    <div class="item"><img src="https://unsplash.it/600/300?image=3" alt="Fourth image" /></div>
+    <div class="item"><img src="https://unsplash.it/600/300?image=4" alt="Fifth image" /></div>
+    <div class="item"><img src="https://unsplash.it/600/300?image=5" alt="Sixth image" /></div>
+    <div class="item"><img src="https://unsplash.it/600/300?image=6" alt="Seventh image" /></div>
+    <div class="item"><img src="https://unsplash.it/600/300?image=7" alt="Nineth image" /></div>
+    <div id="ysControlBar">
+      <a href="javascript:void(0);" class="prev">Prev</a>
+      <a href="javascript:void(0);" class="next">Next</a>
+    </div>
+  </div>
+  <script>
+    var mySlider = new ysSlider();
+
+    document.querySelector(".prev").onclick = function () {
+      mySlider.prev();
+    }
+
+    document.querySelector(".next").onclick = function () {
+      mySlider.next();
+    }
+  </script>
+</body>
+
+</html>

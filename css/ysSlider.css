@@ -1,0 +1,16 @@
+.ysSlider {
+  position: relative;
+  width: 600px;
+  height: 300px;
+}
+.ysControlBar {
+  position: absolute;
+  right: 0px;
+  bottom: 10px;
+}
+.ysControlBar a {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  text-decoration: none;
+}
