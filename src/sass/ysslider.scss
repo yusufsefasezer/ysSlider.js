@@ -1,0 +1,33 @@
+$slideWidth: 600px;
+$slideHeight: 300px;
+
+.ysslider {
+  position: relative;
+  max-width: $slideWidth !important;
+  max-height: $slideHeight !important;
+}
+
+.ysslider .yscontrolbar {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+}
+
+.ysslider .yscontrolbar a {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.ysslider .yscontrolbar .next {
+  position: absolute;
+  transform: translate(0%,-50%);
+  right: 0%;
+}
+
+.ysslider .yscontrolbar .prev {
+  position: absolute;
+  transform: translate(0%,-50%);
+  left: 0%;
+}
