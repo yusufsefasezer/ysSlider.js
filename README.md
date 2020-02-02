@@ -1,7 +1,7 @@
 # ysSlider.js
 ysSlider is an easy-to-use slideshow plug-in that works on almost any browser without the need for any plug-ins.
 
-## [Download](https://github.com/yusufsefasezer/ysSlider.js/archive/master.zip) / [Demo](http://www.yusufsezer.com/projects/ysSlider/) / [yusufsezer.com](http://www.yusufsezer.com)
+## [Download](https://github.com/yusufsefasezer/ysSlider.js/archive/master.zip) / [Demo](http://www.yusufsezer.com/ysSlider.js/) / [yusufsezer.com](http://www.yusufsezer.com)
 
 ## Why should I use ysSlider.js?
 * No need any plug-in - does not need any plugin or library.
