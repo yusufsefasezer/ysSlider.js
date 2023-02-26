@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Example: WithOptions</title>
+  <link rel="stylesheet" href="../dist/css/ysslider.min.css" />
+</head>
+
+<body>
+
+  <h1>ysSlider.js</h1>
+  <h2>Example: WithOptions</h2>
+
+  <div id="myslider">
+    <div class="my-item"><img src="https://unsplash.it/600/300?image=0" /></div>
+    <div class="my-item"><img src="https://unsplash.it/600/300?image=1" /></div>
+    <div class="my-item"><img src="https://unsplash.it/600/300?image=2" /></div>
+    <div class="my-item"><img src="https://unsplash.it/600/300?image=3" /></div>
+    <div class="controlbar">
+      <a href="javascript:void(0);" class="prev">Prev</a>
+      <a href="javascript:void(0);" class="next">Next</a>
+    </div>
+  </div>
+
+  <script src="../dist/js/ysslider.min.js"></script>
+  <script>
+    var mySlider = new ysSlider({
+      wrapper: '#myslider',
+      itemClass: '.my-item',
+      animate: false,
+      auto: true,
+      pause: 2500,
+      touch: true
+    });
+
+    document.querySelector('.prev').onclick = function () {
+      mySlider.prev();
+    }
+
+    document.querySelector('.next').onclick = function () {
+      mySlider.next();
+    }
+  </script>
+</body>
+
+</html>

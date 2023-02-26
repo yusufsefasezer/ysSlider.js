@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Example: WithMethods</title>
+  <link rel="stylesheet" href="../dist/css/ysslider.min.css" />
+  <style>
+    .bottombar {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      background-color: white;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>ysSlider.js</h1>
+  <h2>Example: WithMethods</h2>
+
+  <div id="myslider">
+    <div class="my-item bounce"><img src="https://unsplash.it/600/300?image=0" /></div>
+    <div class="my-item flash"><img src="https://unsplash.it/600/300?image=1" /></div>
+    <div class="my-item shake"><img src="https://unsplash.it/600/300?image=2" /></div>
+    <div class="my-item jello"><img src="https://unsplash.it/600/300?image=3" /></div>
+    <div class="controlbar">
+      <a href="javascript:void(0);" class="prev">Prev</a>
+      <a href="javascript:void(0);" class="next">Next</a>
+    </div>
+    <div class="bottombar"> Total: <span class="total">0</span></div>
+  </div>
+
+  <script src="../dist/js/ysslider.min.js"></script>
+  <script>
+    var totalElem = document.querySelector('.total');
+    var mySlider = new ysSlider({
+      wrapper: '#myslider',
+      itemClass: '.my-item',
+      animate: true,
+      auto: true,
+      pause: 2500,
+      touch: true
+    });
+
+    totalElem.textContent = mySlider.getSlideCount();
+
+    document.querySelector('.prev').onclick = function () {
+      mySlider.prev();
+    }
+
+    document.querySelector('.next').onclick = function () {
+      mySlider.next();
+    }
+  </script>
+</body>
+
+</html>

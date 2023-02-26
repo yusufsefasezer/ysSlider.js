@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Example: Animate</title>
+  <link rel="stylesheet" href="../dist/css/ysslider.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+</head>
+
+<body>
+
+  <h1>ysSlider.js</h1>
+  <h2>Example: Animate</h2>
+
+  <div id="myslider">
+    <div class="my-item bounce"><img src="https://unsplash.it/600/300?image=0" /></div>
+    <div class="my-item flash"><img src="https://unsplash.it/600/300?image=1" /></div>
+    <div class="my-item shake"><img src="https://unsplash.it/600/300?image=2" /></div>
+    <div class="my-item jello"><img src="https://unsplash.it/600/300?image=3" /></div>
+    <div class="controlbar">
+      <a href="javascript:void(0);" class="prev">Prev</a>
+      <a href="javascript:void(0);" class="next">Next</a>
+    </div>
+  </div>
+
+  <script src="../dist/js/ysslider.min.js"></script>
+  <script>
+    var mySlider = new ysSlider({
+      wrapper: '#myslider',
+      itemClass: '.my-item',
+      animate: true,
+      auto: true,
+      pause: 2500,
+      touch: true
+    });
+
+    document.querySelector('.prev').onclick = function () {
+      mySlider.prev();
+    }
+
+    document.querySelector('.next').onclick = function () {
+      mySlider.next();
+    }
+  </script>
+</body>
+
+</html>
