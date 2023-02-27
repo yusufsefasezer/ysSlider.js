@@ -1,7 +1,7 @@
 /*!
  * ysslider - Free, simple and responsive slider plugin.
  * Author: Yusuf Sezer <yusufsezer@mail.com>
- * Version: v1.0.0
+ * Version: v1.0.1
  * Url: https://github.com/yusufsefasezer/ysSlider.js
  * License: MIT
  */
@@ -48,9 +48,9 @@
 	// Shared Methods
 	//
 
-    /**
+	/**
 	 * Check if browser supports required methods.
-     * @private
+	 * @private
 	 * @return {Boolean} Returns true if all required methods are supported.
 	 */
 	var supports = function () {
@@ -61,23 +61,23 @@
 		);
 	};
 
-    /**
+	/**
 	 * Check `obj` is a HTMLElement.
-     * @private
-     * @param {Object} obj The obj to check.
+	 * @private
+	 * @param {Object} obj The obj to check.
 	 * @returns {Boolean} Returns `true` if `obj` is a HTMLElement, else `false`.
 	 */
 	var isElement = function (obj) {
 		return obj instanceof HTMLElement;
 	};
 
-    /**
-     * Merge two or more objects. Returns a new object.
-     * @private
-     * @param {Boolean}  deep     If true, do a deep (or recursive) merge [optional]
-     * @param {Object}   objects  The objects to merge together
-     * @returns {Object}          Merged values of defaults and options
-     */
+	/**
+	 * Merge two or more objects. Returns a new object.
+	 * @private
+	 * @param {Boolean}  deep     If true, do a deep (or recursive) merge [optional]
+	 * @param {Object}   objects  The objects to merge together
+	 * @returns {Object}          Merged values of defaults and options
+	 */
 	var extend = function () {
 
 		// Variables
@@ -120,11 +120,11 @@
 	// Plugin Constructor
 	//
 
-    /** 
-     * Plugin Object
-     * @param {Object} opts User settings
-     * @constructor
-     */
+	/** 
+	 * Plugin Object
+	 * @param {Object} opts User settings
+	 * @constructor
+	 */
 	var Plugin = function (opts) {
 
 		//
@@ -143,11 +143,11 @@
 		// Plugin Methods
 		//
 
-        /**
-         * Initialize Plugin.
-         * @public
-         * @param {Object} options User settings
-         */
+		/**
+		 * Initialize Plugin.
+		 * @public
+		 * @param {Object} options User settings
+		 */
 		publicAPIs.init = function (options) {
 
 			// Feature test
@@ -184,8 +184,8 @@
 
 			// Check if animate active
 			if (settings.animate === true) {
-				for (var i = 0; i < slideItems.length; i++) {
-					slideItems[i].classList.add('animated');
+				for (var index = 0, length = slideItems.length; index < length; index++) {
+					slideItems[index].classList.add('animated');
 				}
 			}
 
@@ -227,8 +227,8 @@
 			if (currentSlide < 0) currentSlide = slideItems.length - 1;
 
 			// Hide all slides
-			for (var i = 0; i < slideItems.length; i++) {
-				slideItems[i].style.display = 'none';
+			for (var index = 0, length = slideItems.length; index < length; index++) {
+				slideItems[index].style.display = 'none';
 			}
 
 			// Show current slide
@@ -292,11 +292,11 @@
 
 		};
 
-        /**
+		/**
 		 * Event handler for "touchstart".
-         * @private
+		 * @private
 		 * @param {event} event DOM event object
-         */
+		 */
 		var onTouchStart = function (event) {
 
 			stopAuto();
@@ -305,11 +305,11 @@
 
 		};
 
-        /**
+		/**
 		 * Event handler for "touchend".
-         * @private
+		 * @private
 		 * @param {event} event DOM event object
-         */
+		 */
 		var onTouchEnd = function (event) {
 
 			touchendX = event.changedTouches[0].screenX;
